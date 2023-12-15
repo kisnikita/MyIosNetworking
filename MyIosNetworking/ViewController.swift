@@ -11,7 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        TodoWorker().fetchTodos()
+        ArticlesWorker().fetchNews(page: 1) { result in
+            print(result)
+        }
     }
 
 
